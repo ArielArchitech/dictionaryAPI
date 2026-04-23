@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Search Dictionary App — learn word pronunciations, definitions, and origins." />
+    <meta name="theme-color" content="#051A40" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+    <link rel="stylesheet" href="dictionaryStyle.css" />
+    <title>Search Dictionary App</title>
+</head>
+
+<body>
+    <div class="container" id="appContainer">
+
+        <!--<> DARK/LIGHT MODE TOGGLE -->
+        <button id="darkModeToggle" class="darkModeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+            <span class="darkModeIcon" aria-hidden="true">🌙</span>
+        </button>
+
+        <!--<> HEADER - APP'S LOGO -->
+        <header role="banner">
+            <img src="/images/icon.png" alt="Application Logo">
+        </header>
+
+        <!--<> MAIN -->
+        <main class="getStarted" id="mainContent" role="main">
+            <button id="startBtn" aria-label="Get started with the dictionary search">Get Started</button>
+        </main>
+
+        <!--<> FOOTER - ALL RIGHT RESERVED -->
+        <footer role="contentinfo" class="siteFooter">
+            <p>&copy 2026 ARIEL FELDMAN • ArielArchitech.com </p>
+        </footer>
+    </div>
+
+    <!--<> SCRIPT -->
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

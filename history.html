@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="View all the words you have previously looked up in the dictionary." />
+    <meta name="theme-color" content="#051A40" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+    <link rel="stylesheet" href="dictionaryStyle.css" />
+    <title>Word History — Dictionary App</title>
+</head>
+
+<body>
+    <div class="searchContainer historyContainer" id="appHistoryContainer">
+
+        <!--<> DARK/LIGHT MODE TOGGLE -->
+        <button id="darkModeToggle" class="darkModeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+            <span class="darkModeIcon" aria-hidden="true">🌙</span>
+        </button>
+
+        <!--<> HEADER - APP'S LOGO -->
+        <header role="banner" class="navLogo">
+            <a href="index.html" aria-label="Back to home page">
+                <img src="/images/icon.png" alt="Search Dictionary App Logo" />
+            </a>
+        </header>
+
+        <!--<> MAIN -->
+        <main class="historyPage" id="mainContent" role="main">
+
+            <h1 class="historyTitle">My Word History</h1>
+
+            <section id="historyList" class="historyList" aria-label="Previously searched words" aria-live="polite">
+
+            </section>
+
+            <div class="historyActions">
+                <button id="clearHistoryBtn" class="clearBtn" aria-label="Clear all word history">
+                    Clear History
+                </button>
+                <button id="backToSearchBtn" class="navBtn" aria-label="Back to dictionary search">
+                    Back to Search >>
+                </button>
+            </div>
+
+        </main>
+
+        <!--<> FOOTER - ALL RIGHT RESERVED -->
+        <footer role="contentinfo" class="siteFooter">
+            <p>&copy; 2026 ARIEL FELDMAN &bull; ArielArchitech.com</p>
+        </footer>
+
+    </div>
+
+    <!--<> SCRIPTS -->
+    <script src="config.js"></script>
+    <script src="history.js"></script>
+</body>
+
+</html>

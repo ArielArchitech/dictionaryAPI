@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Search for definitions, synonyms, and audio pronunciation of any English word." />
+    <meta name="theme-color" content="#051A40" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+    <link rel="stylesheet" href="dictionaryStyle.css" />
+    <title>Search — Dictionary App</title>
+</head>
+
+<body>
+    <div class="searchContainer" id="appSearchBox">
+
+        <!--<> DARK/LIGHT MODE TOGGLE -->
+        <button id="darkModeToggle" class="darkModeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+            <span class="darkModeIcon" aria-hidden="true">🌙</span>
+        </button>
+
+        <!--<> HEADER - APP'S LOGO -->
+        <header role="banner" class="navLogo">
+            <a href="index.html" aria-label="Back to home page">
+                <img src="/images/icon.png" alt="Search Dictionary App Logo" />
+            </a>
+        </header>
+
+        <!--<> MAIN -->
+        <main class="searchPage" id="mainSearchContent" role="main">
+
+            <!--* SEARCH BAR -->
+            <section class="searchSection" aria-label="Word search">
+                <form id="searchForm" role="search" aria-label="Dictionary search form" onsubmit="return false;">
+                    <div class="searchInputWrapper">
+                        <label for="searchInput" class="srOnly">Search for a word</label>
+                        <input type="search" id="searchInput" name="query" placeholder="Search a word..."
+                            autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"
+                            aria-label="Enter a word to search" aria-describedby="searchHint" />
+                        <button type="submit" id="searchBtn" aria-label="Search dictionary">
+                            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="11" cy="11" r="8" />
+                                <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                            </svg>
+                        </button>
+                    </div>
+                    <p id="searchHint" class="srOnly">Press Enter or click the search button to look up a word</p>
+                </form>
+            </section>
+
+            <!--* RESULTS AREA -->
+            <section id="resultsSection" class="resultsSection" aria-live="polite" aria-atomic="false"
+                aria-label="Search results">
+            </section>
+
+            <!--* HISTORY BUTTON -->
+            <div class="BtnWrapper">
+                <button id="historyBtn" class="navBtn" aria-label="View your search history">
+                    My Word History >>
+                </button>
+            </div>
+
+        </main>
+
+        <!--<> FOOTER - ALL RIGHT RESERVED -->
+        <footer role="contentinfo" class="siteFooter">
+            <p>&copy; 2026 ARIEL FELDMAN &bull; ArielArchitech.com</p>
+        </footer>
+
+    </div>
+
+    <!--<> SCRIPTS -->
+    <script src="config.js"></script>
+    <script src="api.js"></script>
+    <script src="render.js"></script>
+    <script src="search.js"></script>
+</body>
+
+</html>
